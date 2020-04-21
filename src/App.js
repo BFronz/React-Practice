@@ -1,26 +1,45 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function Header (props) {
+  return <h1>Shopping Cart
+  </h1>
+}
+
+
+function Footer(props) {
+  return <h2>{props.total}</h2>
+}
+
+function Items(props) {
+  return <table>
+    <tr><th>Name</th>
+    <th>Count</th>
+    <th>Price</th>
+    <th>Total</th></tr>
+
+   </table> 
+}
+
+
+class App extends Component {
+  render () {
+    
+      const productItems = [
+        {name: 'iPhone', count:3, price: 1200},
+        {name: 'iPad',   count:2, price: 800},
+        {name: 'iPod', count:4, price: 200}
+      ];
+
+      return (
+      <div  className="App">
+        <Header />
+        <Items productItems={productItems}/>
+        <Footer total={productItems.reduce(  (a,c) => (a+c.price*c.count), 0)  } />
+     </div> 
+    );
+  }
 }
 
 export default App;
