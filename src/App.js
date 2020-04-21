@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 function Header (props) {
   return <h1>Shopping Cart
   </h1>
 }
-
 
 function Footer(props) {
   return <h2>{props.total}</h2>
@@ -18,7 +17,16 @@ function Items(props) {
     <th>Count</th>
     <th>Price</th>
     <th>Total</th></tr>
-
+    {
+      props.productItems.map(item=>
+        <tr>
+          <td>{item.name}</td>
+          <td>{item.count}</td>
+          <td>{item.price}</td>
+          <td>{item.price*item.count}</td>
+        </tr>
+      ) 
+    }
    </table> 
 }
 
