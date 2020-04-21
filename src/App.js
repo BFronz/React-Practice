@@ -13,20 +13,24 @@ function Footer(props) {
 
 function Items(props) {
   return <table>
+    <thead>
     <tr><th>Name</th>
     <th>Count</th>
     <th>Price</th>
     <th>Total</th></tr>
+    </thead>
+    <tbody>
     {
       props.productItems.map(item=>
-        <tr>
+        <tr key={item.name}>
           <td>{item.name}</td>
           <td>{item.count}</td>
-          <td>{item.price}</td>
-          <td>{item.price*item.count}</td>
+          <td>${item.price}</td>
+          <td>${item.price*item.count}</td>
         </tr>
       ) 
     }
+    </tbody>
    </table> 
 }
 
