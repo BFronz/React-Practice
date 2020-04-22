@@ -7,7 +7,7 @@ Just some fun and practice.
 
 
 ```
-clone hhttps://github.com/BFronz/tic-tac-toe.git
+clone https://github.com/BFronz/Shopping-List.git
 
 Run on command line: 
 npm install
