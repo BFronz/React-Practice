@@ -976,6 +976,39 @@ console.log(sayHi);
 setTimeout(  () => {  clearInterval(sayHi); console.log('stop');   }, 5000   );
 
 
+console.log("-------------");
+
+// function generalizedGCD(num, arr)
+// {
+  
+//     var gcd = function(a, b) {
+//         if ( ! b) {
+//             return a;
+//         }
+
+//         return gcd(b, a % b);
+//     };
+    
+    
+//     // console.log(gcd( arr[0], arr[1]));
+//     // console.log(gcd( arr[1], arr[2]));
+//     // console.log(gcd( arr[3], arr[4]));
+    
+//    var x = gcd( arr[0], arr[1]);
+//    var y = gcd( arr[1], arr[2]);
+//    var z = gcd( arr[3], arr[4]);
+   
+//    var lowest = Math.min(x, y, z);
+   
+//    console.log(lowest);
+// }
+
+ 
+
+console.log("-------------");
+
+
+
 // END TESTING CODE //
 
 
